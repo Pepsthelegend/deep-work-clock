@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Pomodoro Timer</h1>
+        
+        <button id="themeToggle">🌙 Toggle Dark Mode</button>
+
+        <div class="timer-container">
+            <svg width="200" height="200">
+                <circle class="progress-ring" cx="100" cy="100" r="90"></circle>
+            </svg>
+            <div class="timer" id="timer">25:00</div>
+        </div>
+
+        <div class="button-container">
+            <button onclick="startTimer()">Start</button>
+            <button onclick="pauseTimer()">Pause</button>
+            <button onclick="resetTimer()">Reset</button>
+        </div>
+
+        <div class="settings">
+            <label>Session: <input type="number" id="sessionLength" value="25" min="1"> min</label>
+            <label>Break: <input type="number" id="breakLength" value="5" min="1"> min</label>
+        </div>
+
+        <audio id="alarmSound" src="alarm.mp3"></audio>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
